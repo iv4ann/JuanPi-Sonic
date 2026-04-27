@@ -1,2 +1,2 @@
-# JuanPi-Sonic
-Repositorio
+# Orrico_solutions
+final project of web applications 

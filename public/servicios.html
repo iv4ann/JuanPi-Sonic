@@ -34,7 +34,7 @@ const form = document.getElementById('form');
 let editando = false;
 let idEditar = null;
 
-// 🔄 cargar datos
+
 function cargar() {
   fetch('/servicios')
   .then(r=>r.json())
@@ -56,7 +56,7 @@ function cargar() {
   });
 }
 
-// ➕ / ✏️ guardar
+
 form.addEventListener('submit', e=>{
   e.preventDefault();
 
@@ -84,7 +84,7 @@ form.addEventListener('submit', e=>{
   }
 });
 
-// ✏️ editar
+
 function editar(id, servicio, ubicacion, precio){
   form.tipo_servicio.value = servicio;
   form.ubicacion.value = ubicacion;
@@ -94,13 +94,13 @@ function editar(id, servicio, ubicacion, precio){
   idEditar = id;
 }
 
-// ❌ eliminar
+
 function eliminar(id){
   fetch('/servicios/delete/' + id)
     .then(()=>cargar());
 }
 
-// 🔄 iniciar
+
 cargar();
 </script>
 
